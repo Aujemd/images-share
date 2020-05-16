@@ -1,0 +1,6 @@
+npm i express express-handlebars mongoose morgan multer fs-extra errorhandler md5 -S
+
+cd src
+mkdir controllers helpers models public routes server  views
+
+npm i nodemon -D
