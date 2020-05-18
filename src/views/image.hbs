@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        {{image.title}}
+        <button class="btn btn-danger" id="btn-delete" data-id="{{image.uniqueId}}">
+            <i class="fa fa-times"></i> Delete
+        </button>
+    </div>
+    <div class="card-body">
+        <p>{{image.description}}</p>
+        <div class="text-center">
+            <img src="/public/upload/{{image.filename}}" class="img-fluid">
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center">
+        <button class="btn btn-success" id="btn-like" data-id="{{image.filename}}">
+            <i class="fas fa-thumbs-up"> Like</i>
+        </button>
+        <p>
+            <span class="likes-count">{{image.likes}}</span>
+            <i class="fas fa-heart"></i>
+        </p>
+        <p>
+            {{image.views}}<i class="fas fa-eye"></i>
+        </p>
+        <p>
+            {{timeAgo image.timestamp}}
+            <i class="far fa-clock"></i>
+        </p>
+    </div>
+</div>

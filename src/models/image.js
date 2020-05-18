@@ -13,6 +13,6 @@ const ImageSchema = new Schema({
 
 ImageSchema.virtual("uniqueId")
     .get(function(){
-        return this.filename.replace(path.extname(this.filename))
+        return this.filename.replace(path.extname(this.filename), '')
     })
 module.exports = mongoose.model("Image", ImageSchema)
