@@ -22,7 +22,7 @@ ctrl.create = (req, res) => {
             const imageTempPath = req.file.path
             const targetPath = path.resolve(`src/public/upload/${imgUrl}${ext}`)
 
-            if(ext === ".png" || ext === ".jpg" || ext === ".gif"){
+            if(ext === ".png" || ext === ".jpg" || ext === ".gif" || ext === '.jpeg'){
                 await fs.rename(imageTempPath, targetPath)
                 const newImg = new Image({
                     title: req.body.title,
@@ -37,7 +37,6 @@ ctrl.create = (req, res) => {
             }
         }
     }
-
     saveImage()
     }
 
